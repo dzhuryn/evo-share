@@ -117,7 +117,7 @@ if(!empty($socials) && is_array($socials)) {
         'poster' => $imageSrc,
 
     );
-    echo '<meta property="og:title" content="'.$title.'"/>
+    $og = '<meta property="og:title" content="'.$title.'"/>
 <meta property="og:description" content="'.$introText.'"/>
 <meta property="og:image" content="'.$imageSrc.'"/>
 <meta property="og:image:width" content="200"/>
@@ -132,12 +132,13 @@ if(!empty($socials) && is_array($socials)) {
         foreach ($data as $key => $dataItem) {
             $dataStr .= 'data-' . $key . '="' . $dataItem . '" ';
         }
-        $itemStr = ${$item . 'DefaultTpl'};
+        $itemStr = ${$item . 'Tpl'};
         $itemStr = str_replace('[+data+]', ' ' . $dataStr, $itemStr);
         $socialsStr .= $itemStr;
 
     }
 }
 $output =  str_replace('[+wrapper+]', $socialsStr, $wrapTpl);
-$modx->setPlaceholder('share.form',$output)
+$modx->setPlaceholder('share.form',$output);
+$modx->setPlaceholder('share.og',$og);
 ?>
