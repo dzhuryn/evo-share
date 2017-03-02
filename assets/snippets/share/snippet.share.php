@@ -10,7 +10,7 @@ $ptDefaultTpl = '
     async defer
     src="//assets.pinterest.com/js/pinit.js"
 ></script>
-<a class="share" href="https://www.pinterest.com/pin/create/button/" data-pin-custom="true" data-pin-do="buttonPin" [+data+]><i class="spring-ico-pinterest"></i></a>';
+<a class="share" href="https://www.pinterest.com/pin/create/button/" data-pin-custom="true" data-pin-do="buttonPin" [+data+]>pt</a>';
 
 
 
@@ -28,7 +28,7 @@ $imageMultiTvKey = isset($imageMultiTvKey)?$imageMultiTvKey:'image';
 $imageTvs = isset($imageTvs) ? $imageTvs : '';
 $defaultImage = isset($defaultImage) ? $defaultImage : '';
 $docId = isset($docId) ? $docId : $modx->documentIdentifier;
-$socials = isset($socials) ? $socials : 'fb,tw,vk';
+$socials = isset($socials) ? $socials : 'fb,tw,vk,pt';
 $socials = explode(',', $socials);
 $socialsStr = '';
 $lang = $modx->getConfig('_lang');
