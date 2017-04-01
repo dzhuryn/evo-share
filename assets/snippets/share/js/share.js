@@ -37,6 +37,11 @@ $('body').on('click','a.share',function(e){
         url += '&p[url]='       + encodeURIComponent(uri);
         url += '&p[images][0]=' + encodeURIComponent(poster);
     }
+    else if(type='goo'){
+        url  = 'https://plus.google.com/share?';
+        url += 'url='          + encodeURIComponent(uri);
+        url += '&title='       + encodeURIComponent(title);
+    }
     else if(type=='pt'){
 
     }
