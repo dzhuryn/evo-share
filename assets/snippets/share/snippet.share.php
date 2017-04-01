@@ -1,9 +1,10 @@
 <?php
 //шаблоны
 $wrapDefaultTpl = '[+wrapper+]';
-$fbDefaultTpl = '<a class="share" href="#" [+data+]>fb<i class="spring-ico-facebook"></i></a>';
-$twDefaultTpl = '<a class="share" href="#" [+data+]>tw<i class="spring-ico-twitter"></i></a>';
-$vkDefaultTpl = '<a class="share" href="#" [+data+]>vk<i class="spring-ico-vk"></i></a>';
+$fbDefaultTpl = '<a class="share" href="#" [+data+]>fb<i class="ico-facebook"></i></a>';
+$twDefaultTpl = '<a class="share" href="#" [+data+]>tw<i class="ico-twitter"></i></a>';
+$vkDefaultTpl = '<a class="share" href="#" [+data+]>vk<i class="ico-vk"></i></a>';
+$gooDefaultTpl = '<a class="share" href="#" [+data+]>google<i class="ico-google"></i></a>';
 $ptDefaultTpl = '
 <script
     type="text/javascript"
@@ -23,12 +24,13 @@ $fbTpl = isset($fbTpl) ? $fbTpl : $fbDefaultTpl;
 $twTpl = isset($twTpl) ? $twTpl : $twDefaultTpl;
 $ptTpl = isset($ptTpl) ? $ptTpl : $ptDefaultTpl;
 $vkTpl = isset($vkTpl) ? $vkTpl : $vkDefaultTpl;
+$gooTpl = isset($gooTpl) ? $gooTpl : $gooDefaultTpl;
 
 $imageMultiTvKey = isset($imageMultiTvKey)?$imageMultiTvKey:'image';
 $imageTvs = isset($imageTvs) ? $imageTvs : '';
 $defaultImage = isset($defaultImage) ? $defaultImage : '';
 $docId = isset($docId) ? $docId : $modx->documentIdentifier;
-$socials = isset($socials) ? $socials : 'fb,tw,vk,pt';
+$socials = isset($socials) ? $socials : 'fb,tw,vk,pt,goo';
 $socials = explode(',', $socials);
 $socialsStr = '';
 $lang = $modx->getConfig('_lang');
